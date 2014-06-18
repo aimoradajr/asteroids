@@ -26,7 +26,7 @@ public abstract class GunSprite extends Sprite implements ActionListener{
 	protected ShipSprite ship;
 	
 	public GunSprite(ShipSprite ship, int x, int y){
-		super(x, y, "res/theme1/image/bullet/bullet.png");
+		super(x, y, "image/bullet/bullet.png");
 		bullets = new ArrayList<BulletSprite>();
 		setSize(10,10);
 		this. ship = ship;

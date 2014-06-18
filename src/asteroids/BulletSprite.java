@@ -9,7 +9,7 @@ public abstract class BulletSprite extends Sprite {
 	protected String name = "Unknown";
 	
 	public BulletSprite( GunSprite gun, double x, double y, int width, int height, int orientation) {
-		super(x, y, "res/theme1/image/bullet/bullet.png");
+		super(x, y, "image/bullet/bullet.png");
 		move.setLength(4);
 		setDelta(orientation);
 		this.gun = gun;

@@ -27,11 +27,11 @@ public class Sprite {
 		ImageIcon icon = new ImageIcon();
 		
 		try{
-			icon = new ImageIcon(this.getClass().getResource(file));
+			icon = new ImageIcon(this.getClass().getResource("/res/theme1/" + file));
 		}
 		catch(Exception e){
 			System.out.println("ImageIcon not found: \""+file+"\"");
-			icon = new ImageIcon(this.getClass().getResource( "res/theme1/image/image_not_found.png" ));
+			icon = new ImageIcon(this.getClass().getResource("/res/theme1/image/image_not_found.png" ));
 		}
 		
 		image = icon.getImage();

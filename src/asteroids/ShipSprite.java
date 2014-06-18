@@ -59,7 +59,7 @@ public class ShipSprite extends Sprite implements ActionListener{
 		
 		ship_images = new Image[MAX_SHIP_INDEX];
 		for ( int i = 0; i < MAX_SHIP_INDEX; i++ ) {
-            icon = new ImageIcon( this.getClass().getResource( "res/theme1/image/ship/"+ship_names[i] ) );
+            icon = new ImageIcon( this.getClass().getResource( "/res/theme1/image/ship/"+ship_names[i] ) );
             ship_images[i] = icon.getImage();
 		}
 

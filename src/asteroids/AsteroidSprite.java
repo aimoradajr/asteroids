@@ -70,7 +70,7 @@ public class AsteroidSprite extends Sprite {
 	}
 	
 	public AsteroidSprite(double x, double y, int size, int type) {
-		super(x, y, "res/theme1/image/asteroid/"+size+"/"+type+asteroid_image[size]);
+		super(x, y, "image/asteroid/"+size+"/"+type+asteroid_image[size]);
 		
 		setAsteroidSize(size);
 	}
@@ -84,7 +84,7 @@ public class AsteroidSprite extends Sprite {
 
 	public AsteroidSprite(double x, double y, int size) {
 		// Use default image
-		super(x, y, "res/theme1/image/asteroid/"+size+"/0"+asteroid_image[size]);
+		super(x, y, "image/asteroid/"+size+"/0"+asteroid_image[size]);
 		this.size = size;
 	}
 	

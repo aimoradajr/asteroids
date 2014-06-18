@@ -58,10 +58,10 @@ public class Field extends JPanel implements ActionListener {
         setBackground(Color.RED);
         setDoubleBuffered(true);
 
-        bg = new ImageIcon(this.getClass().getResource("res/theme1/image/bg/bg.png"));
-        lifeIcon = new ImageIcon(this.getClass().getResource("res/theme1/image/other/life_icon.png"));
-        gameOverIcon = new ImageIcon(this.getClass().getResource("res/theme1/image/other/gameover.png"));
-        gameStartIcon = new ImageIcon(this.getClass().getResource("res/theme1/image/other/gamestart.png"));
+        bg = new ImageIcon(this.getClass().getResource("/res/theme1/image/bg/bg.png"));
+        lifeIcon = new ImageIcon(this.getClass().getResource("/res/theme1/image/other/life_icon.png"));
+        gameOverIcon = new ImageIcon(this.getClass().getResource("/res/theme1/image/other/gameover.png"));
+        gameStartIcon = new ImageIcon(this.getClass().getResource("/res/theme1/image/other/gamestart.png"));
         
         //font = new Font("Serif", Font.PLAIN, 24);		
 

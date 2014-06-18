@@ -6,7 +6,7 @@ import java.awt.Graphics2D;
 
 public class ExplosionSprite extends Sprite {
 	public ExplosionSprite(double x, double y) {
-		super(x, y, "res/theme1/image/other/explosion.png");
+		super(x, y, "image/other/explosion.png");
 		setSize( 100, 100 );
 	}
 	
