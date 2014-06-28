@@ -196,17 +196,20 @@ public class Field extends JPanel implements ActionListener {
     
     public void actionPerformed(ActionEvent e) {
     	if(e.getSource() == timer){
+
+	    	//move asteroids
+	        for(int i = 0; i < asteroids.size(); i++) {
+	        	AsteroidSprite a = asteroids.get(i);
+	        	if(a.isVisible()) {
+	        		a.move();
+	        	} else
+	        		asteroids.remove(i);
+	        }
+	        
 	    	for(int g = 0 ; g < ship.getGunsCount() ; g++){
 		    	ArrayList<BulletSprite> bullets = ship.getGun(g).getBullets();
 		    	
-		        for(int i = 0; i < asteroids.size(); i++) {
-		        	AsteroidSprite a = asteroids.get(i);
-		        	if(a.isVisible()) {
-		        		a.move();
-		        	} else
-		        		asteroids.remove(i);
-		        }
-		    	
+		        //move bullets
 		        for(int i = 0; i < bullets.size(); i++) {
 		        	BulletSprite b = bullets.get(i);
 		        	if(b.isVisible()) {
@@ -220,6 +223,7 @@ public class Field extends JPanel implements ActionListener {
 	  			System.out.println("Asteroids : 0 - Game Over");
 	        }
 	        
+	        //move ship
 	    	ship.move();
 	    	
 	    	//alien.move();
@@ -229,6 +233,8 @@ public class Field extends JPanel implements ActionListener {
 	    	if(gameStartIconOpacity >= 0.01)
 	    		gameStartIconOpacity -= 0.01;
 			
+	    	
+	    	
 	    	repaint();
     	}
     }
