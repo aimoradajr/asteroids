@@ -6,8 +6,8 @@ import java.util.ArrayList;
 public class Gun8Sprite extends GunSprite {
 
 	public Gun8Sprite(ShipSprite ship, int x, int y) {
-		super(ship, x, y);
-		name = "360 shot";
+		super(ship, x, y,"image/bullet/bullet.png","image/bullet/bullet.png");
+		name = "oOo";
 		
 		setCoolDown(100);
 	}

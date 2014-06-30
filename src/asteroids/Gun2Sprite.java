@@ -6,7 +6,7 @@ import java.util.ArrayList;
 public class Gun2Sprite extends GunSprite {
 
 	public Gun2Sprite(ShipSprite ship, int x, int y) {
-		super(ship, x, y);
+		super(ship, x, y,"image/bullet/bullet.png","image/bullet/bullet.png");
 		name = "gun 2";
 
 		setCoolDown(200);

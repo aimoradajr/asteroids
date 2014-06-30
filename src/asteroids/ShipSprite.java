@@ -54,7 +54,7 @@ public class ShipSprite extends Sprite implements ActionListener{
 	
 	//private ArrayList<BulletSprite> bullets;  <- added to Gun object
 	
-	public ShipSprite(int x, int y) {
+	public ShipSprite( int x, int y ) {
 		ImageIcon icon;
 		
 		ship_images = new Image[MAX_SHIP_INDEX];
@@ -195,6 +195,11 @@ public class ShipSprite extends Sprite implements ActionListener{
 		//paint gun
 		if(guns.size()>0)
 			guns.get(selectedGun).paint(g2d);
+
+        //draw ship guns icon
+        for( int i = 0 ; i< getGunsCount(); i++ ){
+        	getGun( i ).paintThumbnail( g2d, i );
+        }
 	}
 	
 	public int getOrientation(){

@@ -1,6 +1,10 @@
 package asteroids;
 
+import java.awt.BasicStroke;
+import java.awt.Color;
+import java.awt.Font;
 import java.awt.Graphics2D;
+import java.awt.Stroke;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
@@ -25,10 +29,11 @@ public abstract class GunSprite extends Sprite implements ActionListener{
 	
 	protected ShipSprite ship;
 	
-	public GunSprite(ShipSprite ship, int x, int y){
-		super(x, y, "image/bullet/bullet.png");
+	public GunSprite(ShipSprite ship, int x, int y, String imageFile, String thumbnailFile){
+		super(x, y, imageFile,thumbnailFile);
 		bullets = new ArrayList<BulletSprite>();
 		setSize(10,10);
+		setThumbnailSize(20,20);
 		this. ship = ship;
         
         //gun cooldown timer
@@ -61,6 +66,22 @@ public abstract class GunSprite extends Sprite implements ActionListener{
 	public void paint(Graphics2D g2d){
 		updatePosition();
 		g2d.drawImage( getImage(), (int)x , (int)y, width, height, null );
+	}
+	
+	public void paintThumbnail(Graphics2D g2d, int gunNumber){
+		g2d.drawImage( getThumbnailImage(), ( (getThumbnailWidth()+5)*gunNumber )+5, Field.HEIGHT-( getThumbnailHeight()+50 ), getThumbnailWidth(), getThumbnailHeight(), null );
+
+		g2d.setColor(Color.DARK_GRAY);
+		g2d.setStroke(new BasicStroke(1));
+        g2d.setFont(new Font("Verdana", Font.BOLD, 15));
+		
+		if(ship.selectedGun==gunNumber){
+			g2d.setStroke(new BasicStroke(2));
+			g2d.setColor(Color.LIGHT_GRAY);
+			g2d.drawString(name,((getThumbnailWidth()+5)*gunNumber )+5, Field.HEIGHT-(getThumbnailHeight()+60));
+		}
+		g2d.drawRect(( (getThumbnailWidth()+5)*gunNumber )+5, Field.HEIGHT-( getThumbnailHeight()+50 ), getThumbnailWidth(), getThumbnailHeight());
+
 	}
 
 	private void updatePosition() {

@@ -8,7 +8,7 @@ import javax.swing.Timer;
 public class Gun4Sprite extends GunSprite {
 
 	public Gun4Sprite(ShipSprite ship, int x, int y) {
-		super(ship, x, y);
+		super(ship, x, y,"image/bullet/bullet.png","image/bullet/bullet.png");
 		name = "burst fire";
 		
 		setCoolDown(1000);

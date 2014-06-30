@@ -75,7 +75,7 @@ public class Field extends JPanel implements ActionListener {
 		lives_left = 5;
 	    score = 0;
 		
-        ship = new ShipSprite(WIDTH/2,HEIGHT/2);       
+        ship = new ShipSprite( WIDTH/2, HEIGHT/2 );       
         asteroids = new ArrayList<AsteroidSprite>();
         for( int i = 0; i < 5; i++ ) {
         	launch_asteroid();
@@ -131,14 +131,14 @@ public class Field extends JPanel implements ActionListener {
         }
         
         //ship
-        if(ship.isAlive)
-        	ship.paint(g2d);
+        if( ship.isAlive )
+        	ship.paint( g2d );
         
         //g2d.drawImage(alien.getImage(), alien.getX(), alien.getY(), this);
         
         //draw ship lives
-        for(int i = 0 ; i< lives_left;i++){
-        	g2d.drawImage(lifeIcon.getImage(), (WIDTH-50)-(i*lifeIcon.getIconWidth()), 10, this);
+        for( int i = 0; i< lives_left; i++ ){
+        	g2d.drawImage( lifeIcon.getImage(), ( WIDTH-50 )-( i*lifeIcon.getIconWidth() ), 10, this );
         }
         
         //draw explosions
